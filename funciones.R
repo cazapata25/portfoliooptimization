@@ -2,9 +2,9 @@
 ## ---------------------------------------------------------------------------
 ## Teoria de portafolios - 2021-2
 ## Funciones optimizacion de portafolios: Markowitz, Sharpe, Sortino, Treynor
-## Omega, CVaR y evaluación de desempeño
+## Omega, CVaR y evaluaciÃ³n de desempeÃ±o
 ## Universidad Externado de Colombia
-## Prof. Carlos Zapata
+## Prof. Carlos Zapata [e-mail: cazapata25@gmail.com]
 ## @CpR- 2021 
 ## ---------------------------------------------------------------------------
 
@@ -16,7 +16,7 @@ f.precios <- function(activos,fechai,fechaf,periodicidad){
     for(i in 1:length(activos)){
         aux <- Ad(getSymbols(activos[i],from=fechai,to=fechaf,
                              periodicity=periodicidad,auto.assign=FALSE))
-        aux <- na.approx(aux,na.rm=FALSE) # Interpolación de datos con NA
+        aux <- na.approx(aux,na.rm=FALSE) # InterpolaciÃ³n de datos con NA
         precios <- cbind(precios,aux)
     }
     colnames(precios) <- activos
@@ -358,7 +358,7 @@ f.cvar <- function(retornos,alpha){
 
 
 ## ---------------------------------------------------------------------------
-## Evaluacion de desempeño
+## Evaluacion de desempeÃ±o
 ## ---------------------------------------------------------------------------
 
 performance <- function(retornos,r.indice){
